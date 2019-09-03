@@ -1,0 +1,86 @@
+body {
+  background: #9cb8b3;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.board {
+  max-width: 700px;
+  margin: 70px auto;
+  display: box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.mainCard {
+  position: relative;
+  transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  margin: 5px;
+}
+
+.mainCard,
+.bImage,
+.fImage {
+  height: 150px;
+  width: 150px;
+}
+
+.bImage,
+.fImage {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.fImage {
+  background: #fab942 url("../images/guess/ques.jpg") no-repeat center center /
+    contain;
+}
+
+.bImage {
+  transform: rotateY(180deg);
+  /* background-color: pink; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.choosen {
+  transform: rotateY(180deg);
+}
+
+/* Change image of fimage to tumb when answr is correct */
+.correct .fImage {
+  background: url("../images/guess/tumb.png") no-repeat center center / contain;
+}
+
+.modal-header {
+  background-color: #fab942;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.modal-content {
+  border-radius: 10px;
+}
+
+.navbar-brand {
+  text-align: center;
+}
+
+.mainCard.correct {
+  pointer-events: none;
+}
